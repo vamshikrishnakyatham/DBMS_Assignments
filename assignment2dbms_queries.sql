@@ -42,7 +42,7 @@ FROM
                 AND cust.last_name = 'JOHNSON'
                 AND inv.inventory_id = ren.inventory_id
                 AND fili.FID = inv.film_id
-                AND cust.customer_id = inv.customer_id
+                AND cust.customer_id = ren.customer_id
 GROUP BY fili.title
 ORDER BY COUNT(fili.title) DESC
 LIMIT 3;
@@ -50,7 +50,7 @@ LIMIT 3;
 -- Q5
 select fi.title,COUNT(ALL fi.title) as countoftitles
 from film fi,customer cust,inventory inv,rental ren
-where cust.customer_id = inv.customer_id
+where cust.customer_id = ren.customer_id
 and fi.film_id = inv.film_id
 and inv.inventory_id = ren.inventory_id
 and cust.first_name = 'SUSAN'

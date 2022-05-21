@@ -1,0 +1,20 @@
+Module 11 
+Problem-1
+
+INSERTION anomaly
+
+Inorder add a patient we need VisitNo and ProvNo ,Since the combination of them forms a primary key
+
+UPDATE anamoly
+
+If we change ProvSpecialty, ProvNo D2 two rows must be changed.
+
+Deletion anamoly
+
+If we ProvNo D2 in V10021 , P1 will also be deleted.
+
+Problem-3
+
+Student Table : StdNo will voilate BCNF 
+Lender Table : Is in BCNF
+Institution Table : InstName will voilate BCNF
